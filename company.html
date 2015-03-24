@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dashboard - Company</title>
+<link rel="stylesheet" href="assets/css/bootstrap.css" />
+<link rel="stylesheet" href="assets/css/bootstrap-theme.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<script src="assets/js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="assets/js/wow.min.js"></script> -->
+<script type="text/javascript" src="assets/js/myjs.js"></script>
+<script src="assets/js/highcharts.js"></script>
+<script src="assets/js/exporting.js"></script>
+</head>
+<script type="text/javascript">
+$(function () {
+
+    $(document).ready(function () {
+
+		/*Highcharts.setOptions({
+		 colors: ['#983339', '#f8f7f7', '#86272e', '#fcb64d', '#662d91', '#91d03e', '#d19bcf', '#6AF9C4', '#6AF9C4' ]
+		});
+*/
+        // Build the chart
+        $('#container').highcharts({
+        title: {
+            text: 'Companies On Board'
+        },
+		plotOptions: {
+			pie: {
+				allowPointSelect: true
+			}
+		},
+        series: [{
+            type: 'pie',
+            name: 'Total',
+            data: [{
+                name: 'Active',
+                y: 98,
+                color: Highcharts.getOptions().colors[6]// Jane's color
+            }, {
+                name: 'Trial',
+                y: 160,
+                color: Highcharts.getOptions().colors[7] // John's color
+            }, {
+                name: 'Expired',
+                y: 35,
+                color: Highcharts.getOptions().colors[8] // Joe's color
+            }],
+            showInLegend: true,
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    });
+
+		// Build the chart
+        $('#konten').highcharts({
+        title: {
+            text: 'Company Type Breakdown'
+        },
+		plotOptions: {
+			pie: {
+				allowPointSelect: true
+			}
+		},
+        series: [{
+            type: 'pie',
+            name: 'Total',
+            data: [{
+                name: 'Property',
+                y: 79,
+                color: Highcharts.getOptions().colors[9]
+            }, {
+                name: 'Retail',
+                y: 50,
+                color: Highcharts.getOptions().colors[8]
+			}, {
+                name: 'Mining',
+                y: 15,
+                color: Highcharts.getOptions().colors[7]
+			}, {
+                name: 'Startup',
+                y: 23,
+                color: Highcharts.getOptions().colors[6]
+			}, {
+                name: 'Culinary',
+                y: 15,
+                color: Highcharts.getOptions().colors[5]
+            }],
+            showInLegend: true,
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    });
+    });
+
+});
+		</script>
+<style>
+
+${demo.css}
+
+svg > text:last-child {
+	display:none;
+}
+
+h5, h2, h3, h1, h4 {
+	font-family:'AvenirNextLTPro-Demi';
+}
+
+.highlightText2 {
+	width:auto;
+	height:auto;
+	padding:8px 15px;
+	background-color:#fbf5f5;
+}
+
+p.titleStatus {
+	color:#434343;
+	font-size:10px;
+	margin-top:21px;
+	margin-bottom:0;
+	font-family:'AvenirNextLTPro-Demi';
+	margin-left: 10px;
+}
+
+.dateStatus {
+	color:#434343;
+	font-size:12px;
+	font-weight:bold;
+	margin-left: 0px;
+	margin-bottom:0;
+}
+
+.col-md-3 {
+    width: 19%;
+}
+
+.col-md-3 > h5, .col-md-5 > h5 {
+	font-size:11px;
+}
+
+.highlightText2 > .col-md-6 {
+	padding:0;
+}
+
+.highcharts-contextmenu hr {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+</style>
+
+<body>
+	<div class="container bgtopredconfig" style="padding-bottom:60px;">
+        <div class="col-md-12">
+          <div class="row" style="padding-bottom:30px; border-bottom:1px solid#ddd;">
+            <div class="col-md-3">
+            	<h3>Company Statistic</h3>
+            </div>
+            <div class="col-md-3" style="padding-left:0">
+              <h5>LARGEST</h5>
+              <div class="highlightText2">
+                <div class="col-md-6">
+                  <h1 style="font-weight:normal; color:#6f141b">156</h1>
+                  </div>
+                <div class="col-md-6">
+                  	<p class="titleStatus" style="margin-left:22px">REGISTER</p>
+                </div>
+                <div class="clearfix"></div>
+                </div>
+              </div>
+            <div class="col-md-3" style="padding-left:0">
+              <h5>HIGHEST TRAFFIC</h5>
+              <div class="highlightText2">
+                <div class="col-md-6">
+                  <h1 style="font-weight:normal; color:#6f141b">97</h1>
+                  </div>
+                <div class="col-md-6">
+                  <p class="dateStatus">19/12/2014</p>
+                  <p class="titleStatus" style="margin-top:-37px;">USERS</p>
+                  </div>
+                <div class="clearfix"></div>
+              </div>
+              </div>
+            <div class="col-md-5">
+              <h5>AVERAGE TIME SPENT ON SITE</h5>
+              <div class="highlightText2">
+                <div class="col-md-5">
+                  <div class="col-md-6">
+                    <h1 style="font-weight:normal; color:#6f141b">08</h1>
+                    </div>
+                  <div class="col-md-6">
+                    <p class="titleStatus">HOUR</p>
+                    </div>
+                  </div>
+                <div class="col-md-5">
+                  <div class="col-md-6">
+                    <h1 style="font-weight:normal; color:#6f141b">25</h1>
+                    </div>
+                  <div class="col-md-6">
+                    <p class="titleStatus">MINUTES</p>
+                    </div>
+                  </div>
+                <div class="clearfix"></div>
+              </div>
+              </div>
+          </div><!-- col-md-12 -->
+          <div class="col-md-12">
+          		<div class="col-md-6">
+                	<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                </div>
+                <div class="col-md-6">
+                	<div id="konten" ></div>
+                </div>
+                <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+</div>
+</body>
+</html>
